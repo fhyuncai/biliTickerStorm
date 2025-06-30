@@ -73,7 +73,7 @@ jobs:
 
       - name: Generate or update index.yaml
         run: |
-          helm repo index packaged-charts --url https://fhyc.github.io/biliTickerStorm/
+          helm repo index packaged-charts --url https://fhyuncai.github.io/biliTickerStorm/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
