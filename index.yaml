@@ -3,12 +3,12 @@ entries:
   bili-ticker-storm:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-06-30T14:04:57.396646066Z"
+    created: "2025-06-30T14:18:24.06706918Z"
     description: A Helm chart for bili-ticker-storm app
-    digest: 33df385ffb6c1b012c13a7b75342275068656a7c3f9d2b39905685ff5f7ada3f
+    digest: c467aae65c63be68ac5489b462123c147137f9fea0fdb4e806e080582b3b970d
     name: bili-ticker-storm
     type: application
     urls:
-    - https://fhyuncai.github.io/biliTickerStorm/bili-ticker-storm-v0.0.12.tgz
-    version: v0.0.12
-generated: "2025-06-30T14:04:57.396289828Z"
+    - https://fhyuncai.github.io/biliTickerStorm/bili-ticker-storm-v0.0.13.tgz
+    version: v0.0.13
+generated: "2025-06-30T14:18:24.066720229Z"
