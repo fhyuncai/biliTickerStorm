@@ -20,7 +20,7 @@ func getIntFromMap(m map[string]interface{}, keys ...string) int {
 			}
 		}
 	}
-	return -1
+	return 0
 }
 
 func ReadFileAsString(filename string) (string, error) {
