@@ -85,18 +85,21 @@ func (w *Worker) Buy(ctx context.Context, ticketsInfo BiliTickerBuyConfig, timeS
 			if err != nil {
 				log.Errorf("[尝试 %d/60] 创建CreateV2请求体失败: %v", attempt, err)
 				time.Sleep(time.Duration(interval) * time.Millisecond)
+				errno = -1
 				continue
 			}
 			resp, err := client.Post(createURL, body)
 			if err != nil {
 				log.Errorf("[尝试 %d/60] 请求异常: %v", attempt, err)
 				time.Sleep(time.Duration(interval) * time.Millisecond)
+				errno = -1
 				continue
 			}
 			var ret map[string]interface{}
 			if err := json.Unmarshal(resp, &ret); err != nil {
 				log.Errorf("[尝试 %d/60] 解析响应失败: %v", attempt, err)
 				time.Sleep(time.Duration(interval) * time.Millisecond)
+				errno = -1
 				continue
 			}
 			errno = getIntFromMap(ret, "errno", "code")
